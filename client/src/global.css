@@ -1,0 +1,123 @@
+:root {
+  --grid-color: #a1b3d8;
+  --bg-color: #f9fafb;
+  --border-color: rgba(110, 144, 218, 0.667);
+}
+
+body {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: var(--bg-color) ;
+  background-image: linear-gradient(
+      to right,
+      var(--grid-color) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+
+  display: flex;
+  flex-direction: column;
+  background-size: 24px 24px;
+  align-items: center;
+  font-family: sans-serif;
+  position: relative; /* Nécéssaire pour positionner le claque de flou*/
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::after {
+  content: "";
+  /* background-color: #1f69af; */
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 250px; /* Hauteur de la zone flou*/
+  background: linear-gradient(to top, var(--bg-color) 10%, transparent 100%);
+  backdrop-filter: blur(1px); /* Effet de flou*/
+  z-index: -1;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(1px);
+}
+
+.App {
+  counter-reset: mon-compteur;
+  flex: 1;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.App ul {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+ul > li {
+  margin-left: 10px;
+  list-style-type: none;
+  cursor: pointer;
+  font-weight: bolder;
+  color: rgb(49, 125, 224);
+}
+
+ul > li::before {
+  content: "";
+  padding: 2px;
+  background-color: rgb(247, 23, 23);
+  margin: 5px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  background-color: transparent;
+  border: #1f69af dotted 2px;
+  color: #e9e1e1;
+  padding: 0 10px 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.codeTitle {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  background-size: 10px 10px;
+  width: fit-content;
+  background-color: #97baca;
+  color: black;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+code {
+  color: #323435;
+  text-shadow: 0px 0 5px #323435;
+}
+
+.codeTitle::after {
+  counter-increment: mon-compteur;
+  content: "Code #" counter(mon-compteur);
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 3px solid var(--border-color);
+  margin-top: auto; /* Sécurité supplémentaire pour coller le footer */
+  color: rgb(38, 175, 230);
+}
+
+@media (min-width: 768px) {
+  .App {
+    max-width: 1000px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
