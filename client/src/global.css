@@ -52,25 +52,23 @@ body::after {
   margin: 0 auto;
 }
 
-.App ul {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
+.directive{
+  text-align: start;
+  min-width: 100%;
+  margin-bottom: 10px;
+  padding-left: 10px;
 }
 
-ul > li {
-  margin-left: 10px;
-  list-style-type: none;
-  cursor: pointer;
+.directive p{
+  color: #323435;
+  padding-left: 10px;
+  text-transform: lowercase;
+  counter-increment: slash;
+}
+
+.directive p::after{
+  content: "home /...";
   font-weight: bolder;
-  color: rgb(49, 125, 224);
-}
-
-ul > li::before {
-  content: "";
-  padding: 2px;
-  background-color: rgb(247, 23, 23);
-  margin: 5px;
 }
 
 .main {
@@ -103,7 +101,18 @@ code {
 
 .codeTitle::after {
   counter-increment: mon-compteur;
-  content: "Code #" counter(mon-compteur);
+  content: " /" counter(mon-compteur);
+}
+
+.data_empty{
+  background-color: #80d2e7c2;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 5px 15px 5px #32343575;
+  border-left: #e9e1e1 5px solid;
+  color: #1f69af;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
 footer {

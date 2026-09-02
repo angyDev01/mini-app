@@ -1,0 +1,3 @@
+export const CONFIG ={
+  API_KEY: "https://6a9825507160beda2292b6e9.mockapi.io/api/v1/articles"
+};
