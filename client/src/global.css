@@ -48,7 +48,7 @@ body::after {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
-  max-width: 600px;
+  max-width: 580px;
   margin: 0 auto;
 }
 
@@ -75,12 +75,11 @@ body::after {
   display: flex;
   flex-direction: column;
   text-align: start;
-  background-color: transparent;
+  background-color: #e9e1e1c0;
   border: #1f69af dotted 2px;
   color: #e9e1e1;
   padding: 10px;
   border-radius: 10px;
-  margin-bottom: 10px;
 }
 
 .codeTitle {
