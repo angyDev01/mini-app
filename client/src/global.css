@@ -78,7 +78,7 @@ body::after {
   background-color: transparent;
   border: #1f69af dotted 2px;
   color: #e9e1e1;
-  padding: 0 10px 12px 15px;
+  padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -94,9 +94,10 @@ body::after {
   border-radius: 10px;
 }
 
-code {
-  color: #323435;
-  text-shadow: 0px 0 5px #323435;
+.content {
+  color: #0d0d0e;
+  margin-top: 10px;
+  padding: 5px;
 }
 
 .codeTitle::after {

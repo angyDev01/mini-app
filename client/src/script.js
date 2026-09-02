@@ -41,7 +41,7 @@ const getArticle =  await fetch(Api)
         articleItem.classList.add("main");
         articleItem.innerHTML = `
           <span class="codeTitle">${article.title}</span>
-          <code>${article.content}</code>
+          <p class = "content" >${article.content}</p>
         `;
         articleList.appendChild(articleItem);
     });
