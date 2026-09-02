@@ -48,7 +48,7 @@ body::after {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
-  max-width: 580px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -80,6 +80,7 @@ body::after {
   color: #e9e1e1;
   padding: 10px;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .codeTitle {
