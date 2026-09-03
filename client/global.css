@@ -1,7 +1,16 @@
 :root {
   --grid-color: #a1b3d8;
   --bg-color: #f9fafb;
-  --border-color: rgba(110, 144, 218, 0.667);
+  --f-border-color: rgba(110, 144, 218, 0.667);
+  --title-bg-color: #19668a;
+  --text-color: #000000;
+  --font-family: sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -74,8 +83,8 @@ body::after {
   display: flex;
   flex-direction: column;
   text-align: start;
-  background-color: #a1acc0c0;
-  border: #1f69af dotted 2px;
+  background-color: #e0e0e0d0;
+  border: var(--f-border-color) dotted 2px;
   color: #e9e1e1;
   padding: 10px;
   border-radius: 10px;
@@ -88,16 +97,18 @@ body::after {
   margin-bottom: 5px;
   background-size: 10px 10px;
   width: fit-content;
-  background-color: #19668a;
+  background-color: var(--title-bg-color);
   color: black;
   padding: 4px;
   border-radius: 10px;
 }
 
 .content {
-  color: #0d0d0e;
+  color: var(--text-color);
   margin-top: 10px;
   padding: 5px;
+  font-family: var(--font-family) Verdana, Tahoma;
+  font-weight: 700;
 }
 
 .codeTitle::after {
@@ -120,7 +131,7 @@ footer {
   width: 100%;
   text-align: center;
   padding: 20px 0;
-  border-top: 3px solid var(--border-color);
+  border-top: 3px solid var(--f-border-color);
   margin-top: auto; /* Sécurité supplémentaire pour coller le footer */
   color: rgb(38, 175, 230);
 }
@@ -131,5 +142,6 @@ footer {
     max-width: 1000px;
     grid-template-columns: 1fr 1fr;
     min-height: auto;
+    gap: 15px;
   }
 }
