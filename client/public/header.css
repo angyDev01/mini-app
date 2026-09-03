@@ -55,7 +55,7 @@ header ul > li a{
     .burger{
         display: block;
         background-color: var(--h-bg-color);
-        width: 100px;
+        width: 100%;
     }
 
     #burger-toggle{
@@ -152,5 +152,4 @@ header ul > li a{
         color: var(--link-color);
 
     }
-
 }
