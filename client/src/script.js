@@ -1,20 +1,5 @@
-import { CONFIG } from "./config.js";
 
-const Api = CONFIG.API_KEY;
-console.log(Api);
 
-/* const getArticle = async function getArticles() {
-  try {
-    const response = await fetch(Api);
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Erreur lors de la récupération des articles :", error);
-    return [];
-  }
-}
-
-console.log(getArticles()); */
 const articleList = document.querySelector(".article");
 //récupérer tous les éléments ayant la classe "codeTitle"
 let codeTitle = document.querySelector(".codeTitle");
