@@ -1,5 +1,5 @@
 :root{
-    --link-color: #0aaff0;
+    --link-color: #010b0f;
     --h-bg-color: #e0e0e0e5;
     --link-bg-color: #ffffff;
     --link-pad: 5px;
@@ -12,7 +12,7 @@ header{
     min-width: 100%;
     position: sticky;
     top: 1px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 header ul > li{
@@ -25,8 +25,11 @@ header ul > li{
 header ul > li a{
     text-decoration: none;
     color: var(--link-color);
-    background-color: var(--link-bg-color);
+    background-color: #e0e0e0;
     border: var(--link-border);
     padding: var(--link-pad);
     border-radius: 10px;
+    font-size: 12pt;
+    color: var(--link-color);
+    font-weight: 700;
 }
