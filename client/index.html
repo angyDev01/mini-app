@@ -30,38 +30,48 @@
   <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/90454c72-4192-4718-ba39-c34448b167fe.jpg" />
 
     <link rel="stylesheet" href="./global.css">
-    <link rel="stylesheet" href="./src/header.css">
+    <link rel="stylesheet" href="./public/header.css">
     <title>My Design App - Nouvelle Découverte</title>
   </head>
 
   <body>
 
-
     <!-- conteneur de menu de navigation -->
 
     <header>
-      <nav>
-        <ul>
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#">À propos</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="burger">
+        <input type="checkbox" id="burger-toggle" />
+        <label for="burger-toggle" class="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        <!-- Le nav doit être ici, au même niveau que l'input et le label -->
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Projets</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+      </div>
     </header>
+
+    <!-- conteneur de directive -->
+     
+    <div class="directive">
+      <p></p>
+    </div>
 
     <!-- Conteneur de motivation -->
 
     <div class="first-content">
       <h3>When u're a dream, make it real !</h3>
       <quote>
-        "La créativité, c'est l'intelligence qui s'amuse." - Albert Einstein
+        "La créativité, c'est l'intelligence qui s'amuse." 
+        <pre>- Albert Einstein</pre>
       </quote>
-    </div>
-    
-    <!-- conteneur de directive -->
-
-    <div class="directive">
-      <p></p>
     </div>
 
     <!-- conteneur principal pour les artlicles -->
@@ -77,5 +87,7 @@
     </footer>
     <script src="config.js" type="module"></script>
     <script src="./src/script.js" defer type="module"></script>
+    <script src="./public/burger.js" defer type="module"></script>
+
   </body>
 </html>

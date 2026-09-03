@@ -4,6 +4,7 @@
   --f-border-color: rgba(110, 144, 218, 0.667);
   --title-bg-color: #19668a;
   --text-color: #000000;
+  --motiv-bgColor: #3676be;
   --font-family: sans-serif;
 }
 
@@ -33,6 +34,7 @@ body {
   position: relative; /* Nécéssaire pour positionner le claque de flou*/
   min-height: 100vh;
   overflow-x: hidden;
+  background-attachment: fixed;
 }
 
 body::after {
@@ -59,7 +61,28 @@ body::after {
   align-items: center;
   display: flex;
   flex-direction: column;
+  margin: 20px;
+  background-color: var(--motiv-bgColor);
+  padding: 0px;
+  border-radius: 5px;
+  border: 2px dotted #19668a;
 }
+
+.first-content h3{
+  padding: 10px;
+  border-bottom: 2px solid var(--text-color);
+  color: #e9e1e1;
+}
+
+.first-content quote{
+  padding: 15px 10px;
+  font-weight: 600;
+}
+
+.first-content quote pre{
+  color: rgb(15, 241, 230);
+}
+
 
 /* conteneur des articles */
 
@@ -86,12 +109,37 @@ body::after {
   color: #323435;
   padding-left: 10px;
   text-transform: lowercase;
-  counter-increment: slash;
+  padding-left: 18px;
+  font-weight: 800;
 }
 
 .directive p::after{
   content: "home /...";
   font-weight: bolder;
+}
+
+.directive::before{
+  position: relative;
+  content: "co";
+  
+  top: 15px;
+  padding: 5px;
+  font-size: 1pt;
+  background-color: #bbf0ba;
+  border-radius: 50px;
+  animation: signal 1s ease-in-out 2s infinite;
+}
+
+@keyframes signal {
+  0%{
+    background-color: rgb(181, 236, 126);
+  }
+  50%{
+    background-color:#57e952;
+  }
+  100%{
+    background-color: #13fd0b;
+  }
 }
 
 /* conteneur enfant de .App */
@@ -124,8 +172,8 @@ body::after {
   color: var(--text-color);
   margin-top: 10px;
   padding: 5px;
-  font-family: var(--font-family) Verdana, Tahoma;
-  font-weight: 700;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
 }
 
 .codeTitle::after {
@@ -153,7 +201,8 @@ footer {
   padding: 20px 0;
   border-top: 3px solid var(--f-border-color);
   margin-top: auto; /* Sécurité supplémentaire pour coller le footer */
-  color: rgb(38, 175, 230);
+  color: #000000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Responsive design */
@@ -165,5 +214,9 @@ footer {
     grid-template-columns: 1fr 1fr;
     min-height: auto;
     gap: 15px;
+  }
+
+  .first-content{
+    max-width: 1000px;
   }
 }

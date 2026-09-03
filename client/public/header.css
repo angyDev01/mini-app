@@ -1,0 +1,156 @@
+:root{
+    --link-color: #010b0f;
+    --h-bg-color: #e0e0e0e5;
+    --link-bg-color: #ffffff;
+    --link-pad: 5px;
+    --link-border: 1px solid var(--link-bg-color);
+}
+
+#burger-toggle{
+    display: none;
+}
+
+header{
+    display: flex;
+    background-color: var(--h-bg-color);
+    min-width: 100%;
+    position: sticky;
+    top: 1px;
+    margin-bottom: 25px;
+}
+
+header ul > li{
+    list-style-type: none;
+    float: left;
+    padding: 10px;
+    margin: 10px;
+}
+
+header ul > li a{
+    text-decoration: none;
+    color: var(--link-color);
+    background-color: #e0e0e0;
+    border: var(--link-border);
+    padding: var(--link-pad);
+    border-radius: 10px;
+    font-size: 12pt;
+    color: var(--link-color);
+    font-weight: 700;
+}
+
+
+/* Responsive sur mobile */
+
+@media (max-width: 768px){
+    header{
+        display: flex;
+        height: 50px;
+        background-color:transparent;
+    }
+
+    header nav{
+        display: none;
+    }
+
+    .burger{
+        display: block;
+        background-color: var(--h-bg-color);
+        width: 100px;
+    }
+
+    #burger-toggle{
+        display: none;
+    }
+
+    .burger-icon{
+        display: block;
+        width: 30px;
+        height: 25px;
+        position: relative;
+        top: 10px;
+        left: 10px;
+    }
+
+    .burger-icon span{
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: var(--link-color);
+        position: absolute;
+        left: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .burger-icon span:nth-child(1){
+        top: 0;
+    }
+
+    .burger-icon span:nth-child(2){
+        top: 10px;
+    }
+
+    .burger-icon span:nth-child(3){
+        top: 20px;
+    }
+
+    /* Transform the first line into a cross */
+    #burger-toggle:checked + .burger-icon span:nth-child(1){
+        transform: rotate(45deg);
+        top: 10px;
+    }
+
+    /* Hide the second line */
+    #burger-toggle:checked + .burger-icon span:nth-child(2){
+        opacity: 0;
+    }
+
+    /* Transform the third line into a cross */
+    #burger-toggle:checked + .burger-icon span:nth-child(3){
+        transform: rotate(-45deg);
+        top: 10px;
+    }
+
+    /* Cacher le menu par défaut sur mobile */
+    .burger nav {
+        display: none;
+        position: absolute;
+        top: 50px; /* Ajustez selon la hauteur de votre header */
+        left: 0;
+        width: 100px; /* ou 100% selon votre design */
+        background-color: var(--h-bg-color);
+        text-align: center;
+        min-height: 100vh;
+        transition: all 0.3s ease-in-out;
+    }
+
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    header nav ul > li{
+        margin: 10px 0;
+    }
+
+    header nav ul > li a{
+        display: block;
+        padding: 5px;
+    }
+
+
+    /* Afficher le menu quand la checkbox est cochée */
+    #burger-toggle:checked ~ nav {
+        display: block;
+    }
+
+    header nav ul > li a{
+        font-size: 10pt;
+        background-color: transparent;
+        border: none;
+        color: var(--link-color);
+
+    }
+
+}
