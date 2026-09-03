@@ -1,11 +1,9 @@
-
-
 const articleList = document.querySelector(".article");
 //récupérer tous les éléments ayant la classe "codeTitle"
 let codeTitle = document.querySelector(".codeTitle");
 let codeContent = document.querySelector(".codeContent");
 
-const getArticle =  await fetch(Api)
+const getArticle =  await fetch("https://6a9825507160beda2292b6e9.mockapi.io/api/v1/articles")
   .then((response) =>{
     if (!response.ok){
         throw new Error("Erreur lors de la récupération des articles");
