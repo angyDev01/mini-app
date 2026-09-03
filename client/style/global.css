@@ -121,7 +121,7 @@ body::after {
 .directive::before{
   position: relative;
   content: "co";
-  
+  color: #38ec0b;
   top: 15px;
   padding: 5px;
   font-size: 1pt;
