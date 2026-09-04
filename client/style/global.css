@@ -118,29 +118,6 @@ body::after {
   font-weight: bolder;
 }
 
-.directive::before{
-  position: relative;
-  content: "co";
-  color: #38ec0b;
-  top: 15px;
-  padding: 5px;
-  font-size: 1pt;
-  background-color: #bbf0ba;
-  border-radius: 50px;
-  animation: signal 1s ease-in-out 2s infinite;
-}
-
-@keyframes signal {
-  0%{
-    background-color: rgb(181, 236, 126);
-  }
-  50%{
-    background-color:#57e952;
-  }
-  100%{
-    background-color: #13fd0b;
-  }
-}
 
 /* conteneur enfant de .App */
 
