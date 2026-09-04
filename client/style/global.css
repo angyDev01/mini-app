@@ -56,7 +56,7 @@ body::after {
 /* conteneur des motivations */
 
 .first-content{
-  width: 80%;
+  width: 90%;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -92,7 +92,7 @@ body::after {
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -125,7 +125,7 @@ body::after {
   display: flex;
   flex-direction: column;
   text-align: start;
-  background-color: #e0e0e0d0;
+  background-color: #19e419d0;
   border: var(--f-border-color) dotted 2px;
   color: #e9e1e1;
   padding: 10px;
