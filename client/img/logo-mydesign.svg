@@ -1,0 +1,15 @@
+<svg id="app-logo" xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+        <defs>
+            <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#cbd5e1" stroke-width="0.5"/>
+            </pattern>
+        </defs>
+        <!-- Fond quadrillé -->
+        <rect width="200" height="60" fill="url(#grid)" rx="8"/>
+        <!-- Carte sombre du logo -->
+        <rect x="10" y="10" width="180" height="40" rx="6" fill="#1e293b"/>
+        <!-- Texte du logo -->
+        <text x="25" y="35" font-family="monospace" font-size="16" font-weight="bold" fill="#ffffff">
+            My<tspan fill="#00ffcc">Design</tspan>
+        </text>
+    </svg>

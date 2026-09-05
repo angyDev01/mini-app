@@ -1,0 +1,30 @@
+<svg id="custom-card-image" xmlns="http://www.w3.org/2000/svg" width="500" height="260" viewBox="0 0 500 260">
+    <defs>
+        <pattern id="grid-bg" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#cbd5e1" stroke-width="0.8"/>
+        </pattern>
+    </defs>
+    <!-- Fond quadrillé -->
+    <rect width="500" height="260" fill="url(#grid-bg)" rx="8"/>
+    
+    <!-- Carte bleue -->
+    <rect x="35" y="35" width="430" height="190" rx="12" fill="#2b6cb0" />
+    
+    <!-- Titre / Citation principale -->
+    <text x="250" y="85" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">
+        When u're a dream, make it real !
+    </text>
+    
+    <!-- Ligne de séparation -->
+    <line x1="80" y1="110" x2="420" y2="110" stroke="#000000" stroke-width="2" />
+    
+    <!-- Texte secondaire -->
+    <text x="250" y="155" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#000000" text-anchor="middle">
+        "La créativité, c'est l'intelligence qui s'amuse."
+    </text>
+    
+    <!-- Auteur -->
+    <text x="250" y="185" font-family="Arial, sans-serif" font-size="13" fill="#00ffcc" text-anchor="middle">
+        - Albert Einstein
+    </text>
+</svg>
