@@ -1,6 +1,6 @@
 :root{
     --link-color: #010b0f;
-    --h-bg-color: #777474de;
+    --h-bg-color: #777474;
     --link-bg-color: #ffffff;
     --link-pad: 5px;
     --link-border: 1px solid var(--link-bg-color);
@@ -22,7 +22,7 @@ header{
     background-color: var(--h-bg-color);
     min-width: 100%;
     position: sticky;
-    top: 1px;
+    top: 0px;
     margin-bottom: 25px;
 }
 
@@ -150,6 +150,13 @@ header ul > li a{
     /* Afficher le menu quand la checkbox est cochée */
     #burger-toggle:checked ~ nav {
         display: block;
+        position: absolute;
+        top: 50px; /* Ajustez selon la hauteur de votre header */
+        left: 0;
+        width: 100%; /* ou 100% selon votre design */
+        /*eviter que le contenu de la page soit manipulable lorsque le menu est ouvert*/
+        pointer-events:all;
+
     }
 
     header nav ul > li a{

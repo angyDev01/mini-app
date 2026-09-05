@@ -1,7 +1,7 @@
 :root {
   --grid-color: #a1b3d8;
   --bg-color: #f9fafb;
-  --f-border-color: rgba(110, 144, 218, 0.667);
+  --f-border-color: rgba(164, 190, 247, 0.667);
   --title-bg-color: #19668a;
   --text-color: #000000;
   --motiv-bgColor: #3676be;
@@ -66,7 +66,6 @@ body::after {
   background-color: var(--motiv-bgColor);
   padding: 0px;
   border-radius: 5px;
-  border: 2px dotted #19668a;
 }
 
 .first-content h3{
@@ -127,9 +126,8 @@ body::after {
   flex-direction: column;
   text-align: start;
   background-color: #777474ce;
-  border: var(--f-border-color) dotted 2px;
   color: #e9e1e1;
-  padding: 10px;
+  padding: 5px;
   border-radius: 10px;
   margin-bottom: 20px;
   height: auto;
@@ -183,6 +181,11 @@ footer {
   color: #000000;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: var(--bg-color);
+}
+
+em {
+  color: #1f69af;
+  font-weight: bolder;
 }
 
 /* Responsive design */
