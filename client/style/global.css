@@ -8,7 +8,7 @@
   --font-family: sans-serif;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,7 +16,7 @@
 
 body {
   margin: 0;
-  padding: 0px;
+  padding: 0;
   box-sizing: border-box;
   background-color: var(--bg-color) ;
   background-image: linear-gradient(
@@ -35,6 +35,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background-attachment: fixed;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; 
 }
 
 body::after {
@@ -94,6 +95,7 @@ body::after {
   flex-direction: column;
   width: 90%;
   margin: 0 auto;
+  transition: all 0.3s ease-in-out;
 }
 
 /* conteneur des directives */
@@ -108,13 +110,12 @@ body::after {
 .directive p{
   color: #323435;
   padding-left: 10px;
-  text-transform: lowercase;
   padding-left: 18px;
   font-weight: 800;
 }
 
 .directive p::after{
-  content: "home /...";
+  content: "Articles /...";
   font-weight: bolder;
 }
 
@@ -132,6 +133,7 @@ body::after {
   border-radius: 10px;
   margin-bottom: 20px;
   height: auto;
+  transition: all 5s ease-in-out;
 }
 
 .codeTitle {
@@ -180,6 +182,7 @@ footer {
   margin-top: auto; /* Sécurité supplémentaire pour coller le footer */
   color: #000000;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--bg-color);
 }
 
 /* Responsive design */
