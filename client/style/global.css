@@ -135,13 +135,13 @@ body::after {
 }
 
 .codeTitle {
-  margin-top: 15px;
+  margin-top: 5px;
   margin-bottom: 5px;
   background-size: 10px 10px;
   width: fit-content;
   background-color: var(--title-bg-color);
   color: black;
-  padding: 4px;
+  padding: 6px;
   border-radius: 10px;
 }
 
@@ -164,10 +164,6 @@ body::after {
   float: left;
 }
 
-.codeTitle::after {
-  counter-increment: mon-compteur;
-  content: " /" counter(mon-compteur);
-}
 
 .data_empty{
   background-color: #80d2e7c2;
