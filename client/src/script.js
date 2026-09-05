@@ -23,6 +23,11 @@ try {
             articleItem.innerHTML = `
                 <span class="codeTitle">${article.title}</span>
                 <p class="content">${article.content}</p>
+                <div class="date">
+                    <span>Publié le : ${new Date(article.createdAt).toLocaleDateString()}</span>
+                    <span class="admin">${ article.admin }</span>
+                </div>
+
             `;
             articleList.appendChild(articleItem);
         });

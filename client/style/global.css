@@ -153,6 +153,17 @@ body::after {
   font-weight: 400;
 }
 
+.date{
+  font-size: 10pt;
+  color: #f2f5f7;
+  font-weight: bolder;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  float: left;
+}
+
 .codeTitle::after {
   counter-increment: mon-compteur;
   content: " /" counter(mon-compteur);
