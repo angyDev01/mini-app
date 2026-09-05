@@ -125,7 +125,7 @@ body::after {
   display: flex;
   flex-direction: column;
   text-align: start;
-  background-color: #e0e0e0d0;
+  background-color: #777474ce;
   border: var(--f-border-color) dotted 2px;
   color: #e9e1e1;
   padding: 10px;
